@@ -1,0 +1,26 @@
+.hotelContainer{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #cdcdcd;
+    margin-bottom: 20px;
+    background-color: gainsboro;
+}
+.hotelGeneral{
+    display: flex;
+    padding: 10px;
+}
+.hotelImage {
+    flex-basis: 25%;
+}
+.img{
+    max-width: 100%;
+    height: auto;                                        
+}
+.hotelInfo{
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.hotelDescription{
+    padding: 10px;
+}

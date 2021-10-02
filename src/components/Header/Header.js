@@ -1,8 +1,12 @@
 import React from "react";
+import style from "./Header.module.css"
+import Searchbar from "./Searchbar/Searchbar";
 
 function Header(){
     return ( 
-        <div>HEADER</div>
+        <header className={style.header}>
+            <Searchbar />
+        </header>
      );
 }
  
