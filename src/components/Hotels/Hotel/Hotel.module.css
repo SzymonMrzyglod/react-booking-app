@@ -20,6 +20,9 @@
     flex-grow: 1;
     padding: 10px;
 }
+.hotelInfo p{
+    font-size: 1.6rem;
+}
 
 .hotelDescription{
     padding: 10px;

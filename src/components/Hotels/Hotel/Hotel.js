@@ -1,8 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 import style from "./Hotel.module.css";
 import img from "../../../assets/images/hotel.jpg"
 
-function Hotel() {
+const propTypes = {
+    name: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+}
+
+function Hotel(props) {
     return(
         <div className={style.hotelContainer}>
             <div className={style.hotelGeneral}>
@@ -14,21 +22,22 @@ function Hotel() {
                     />
                 </div>
                 <div className={style.hotelInfo}>
-                    <h2>Tytuł</h2>
-                    <p>Miasto</p>
+                    <h2>{props.name}</h2>
+                    <p>{props.city}</p>
                 </div>
                 <div className={style.hotelInfo}>
-                    <p>Ocena: <strong>8.3</strong></p>
+                    <p>Ocena: <strong>{props.rating}</strong></p>
                     <a href="#" className='btn btn-primary'>Pokaż</a>
                 </div>
             </div>
 
             <div className={style.hotelDescription}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias natus quas asperiores hic sapiente! Odit assumenda aperiam ut necessitatibus beatae.</p>
-                
+                <p>{props.description}</p>
             </div>
         </div>
     );
 };
+
+Hotel.propTypes = propTypes;
 
 export default Hotel;
